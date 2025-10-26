@@ -1,20 +1,10 @@
 function firstNonRepeatedChar(str) {
  // Write your code here
-	
-	for (let index = 0; index < str.length; index++) {
-		let char=str.charAt(index);
-		index++;
-		if(char==str.charAt(index) && index<str.length)
-		{
-		while(char==str.charAt(index) && index<str.length){
-			index++;
+	for(let i = 0;i<str.length;i++){
+		let char = str[i];
+		if(str.indexOf(char)===str.lastIndexOf(char)){
+			return char;
 		}
-			index--;
-			continue;
-		}
-		return char;
-
-		
 	}
 	return null;
 	
